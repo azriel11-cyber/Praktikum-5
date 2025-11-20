@@ -1,0 +1,35 @@
+# Program menggunakan dictionary untuk menyimpan data mahasiswa
+
+# Dictionary berisi nama mahasiswa sebagai key dan nilai sebagai value
+mahasiswa = {
+    "Fadhil": 85,
+    "Aulia": 92,
+    "Rizky": 78,
+    "Siti": 88
+}
+
+# Menampilkan seluruh data
+print("Data Nilai Mahasiswa:")
+for nama, nilai in mahasiswa.items():
+    print(f"{nama}: {nilai}")
+
+# Menambahkan data baru
+mahasiswa["Budi"] = 90
+
+# Mengubah nilai
+mahasiswa["Rizky"] = 82
+
+# Menghapus data
+del mahasiswa["Siti"]
+
+# Menampilkan data setelah perubahan
+print("\nSetelah update:")
+for nama, nilai in mahasiswa.items():
+    print(f"{nama}: {nilai}")
+
+# Mencari nilai tertentu
+cari = "Aulia"
+if cari in mahasiswa:
+    print(f"\nNilai {cari} adalah {mahasiswa[cari]}")
+else:
+    print(f"{cari} tidak ditemukan dalam data.")
